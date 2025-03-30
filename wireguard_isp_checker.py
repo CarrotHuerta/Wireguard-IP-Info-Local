@@ -6,16 +6,13 @@ import os
 import subprocess
 import csv
 
+
 def clear_screen():
-    # For Windows
-    if os.name == 'nt':
-        _ = os.system('cls')
-    # For Unix/Linux/MacOS
-    else:
+    if os.name == 'posix':
         _ = os.system('clear')
 
-# clear screen
 clear_screen()
+
 
 def init_csv(file_path):
     if not os.path.exists(file_path):
